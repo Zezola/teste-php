@@ -1,0 +1,9 @@
+{
+    "name": "joseulisses/teste-spin",
+    "description" : "projeto para o teste de desenvolvedor php",
+    "authors": [{"name": "jose ulisses",
+        "email":"joseulisses03@gmail.com"}],
+    "require": {
+        "php": ">=5.6"
+    }
+}
