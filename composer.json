@@ -1,6 +1,11 @@
 {
     "name": "joseulisses/teste-spin",
     "description" : "projeto para o teste de desenvolvedor php",
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
     "authors": [{"name": "jose ulisses",
         "email":"joseulisses03@gmail.com"}],
     "require": {

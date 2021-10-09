@@ -1,6 +1,6 @@
 <?php 
 
-echo("Ola\n");
+
 
 /* 
 - "Plano" dito aqui signficia "Plano de Saúde".
@@ -42,25 +42,31 @@ Esse programa deve ler a tabela de Plano e a tabela de Preço, e retornar:
     1 - Pegar as informações do usuário 
 
 	*/
+	
     
-    require_once ('./classes/Beneficiario.class.php');
-	require_once 'classes/Plano.class.php';
-	$beneficario = new Beneficiario("Julia", 40);
-	$beneficiario->getNome();
+	require __DIR__.'/vendor/autoload.php';
+
+	// Importando as classes
+	require_once "./src/classes/Beneficiario.php";
+	use App\Entity\Beneficiario;
+
+	require_once "./src/classes/Plano.php";
+	use App\Entity\Plano;
+
+	// Importando os controllers
+	require_once "./src/controllers/PlanoController.php";
+	use App\Controller\PlanoController;
+
+	// Instanciando o controller
+	$beneficiario = new Beneficiario("J", 3);
+	$planoController = new PlanoController();
+	echo ($planoController->getPlanosByRegistro("reg2"));
+
 	
 	
-
-    //$beneficario = new Beneficiario("Jorge", 40);
-
-    //echo "Beneficiario: " .$beneficiario->nome;
-
-	// Ler a quantidade de beneficiários
-
-	// Parseando o JSON
-
-	$planos = file_get_contents("planos.json");
-	$planosDecoded = json_decode($planos, true);
 	
-	echo $planosDecoded[0]["registro"];
+
+
+	
 
 

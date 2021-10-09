@@ -1,8 +1,11 @@
 <?php 
 
-class Beneficiário {
+namespace App\Entity;
+
+class Beneficiario {
     private string $nome; 
     private int $idade;
+    
 
 
     function __construct($nome, $idade) {
@@ -15,6 +18,7 @@ class Beneficiário {
         // Pegar a idade do participante 
         file_get_contents('planos.json');
         // Verificar em qual faixa ele fica
+        return "30";
     }
 
     function getNome() {
@@ -22,4 +26,3 @@ class Beneficiário {
     }
 }
 
-?>
