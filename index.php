@@ -70,6 +70,8 @@ Esse programa deve ler a tabela de Plano e a tabela de Preço, e retornar:
 		// Pegando numero de vidas do plano
 		$vidas = readline("Numero de vidas do plano: ");
 
+		$plano->setVidas($vidas);
+
 		// Cadastrando beneficiarios com idade e nome e pegando seu preco baseado na idade
 		
 		for ($aux = 0; $aux < $vidas; $aux++) {

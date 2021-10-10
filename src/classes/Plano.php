@@ -5,17 +5,20 @@
     use App\Entity\Beneficiario;
 
     class Plano {
-        private int $quantidadeDeBeneficiarios;
+        private int $vidas;
         private $beneficiarios = array();
         private string $registro; 
         private string $nome; 
         private int $codigo; 
 
-        function __construct(  $registro, $nome, $codigo) {
-            
+        function __construct($registro, $nome, $codigo) {
             $this->registro = $registro;
             $this->nome = $nome;
             $this->codigo = $codigo;
+        }
+
+        function setVidas($vidas) {
+            $this->vidas = $vidas;
         }
 
         function getNome(){
@@ -33,7 +36,8 @@
     
             // Procurando o codigo do plano
             for ($aux = 0; $aux < count($precosDecoded); $aux++) {
-                if ($this->codigo == $precosDecoded[$aux]["codigo"]) {
+                if ($this->codigo == $precosDecoded[$aux]["codigo"] && 
+                $this->vidas >= $precosDecoded[$aux]["minimo_vidas"]) {
                     $preco = $precosDecoded[$aux][$beneficario->getFaixa($beneficario->getIdade())];
                 }
                 
