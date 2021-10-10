@@ -14,11 +14,8 @@ class Beneficiario {
 
     }
 
-    function getFaixa($idade) {
-        // Pegar a idade do participante 
-        file_get_contents('planos.json');
-        // Verificar em qual faixa ele fica
-        return "30";
+    function getIdade(){
+        return $this->idade;
     }
 
     function getNome() {

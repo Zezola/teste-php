@@ -57,10 +57,14 @@ Esse programa deve ler a tabela de Plano e a tabela de Preço, e retornar:
 	require_once "./src/controllers/PlanoController.php";
 	use App\Controller\PlanoController;
 
+	// Precisamos do numero de beneficiarios
+	$numeroDeBeneficiarios = readline("Numero de vidas do plano: ");
+	
+
 	// Instanciando o controller
 	$beneficiario = new Beneficiario("J", 3);
 	$planoController = new PlanoController();
-	echo ($planoController->getPlanosByRegistro("reg2"));
+	$planoController->getPlanosByRegistro("reg1");
 
 	
 	
