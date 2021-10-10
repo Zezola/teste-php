@@ -1,6 +1,8 @@
 <?php
 
     namespace App\Entity;
+    
+    use App\Entity\Beneficiario;
 
     class Plano {
         private int $quantidadeDeBeneficiarios;
@@ -18,6 +20,11 @@
 
         function getNome(){
             return $this->nome;
+        }
+
+        function cadastrarBeneficiario($beneficario) {
+            array_push($this->beneficiarios, $beneficario);
+            
         }
     }
 

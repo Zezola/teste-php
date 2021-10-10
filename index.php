@@ -64,8 +64,10 @@ Esse programa deve ler a tabela de Plano e a tabela de Preço, e retornar:
 	// Instanciando o controller
 	$beneficiario = new Beneficiario("J", 3);
 	$planoController = new PlanoController();
-	$planoController->getPlanosByRegistro("reg1");
+	$plano = $planoController->getPlanosByRegistro("reg1");
+	$plano->cadastrarBeneficiario($beneficiario);
 
+	
 	
 	
 	
