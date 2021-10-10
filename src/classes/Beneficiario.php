@@ -21,5 +21,7 @@ class Beneficiario {
     function getNome() {
         return $this->nome;
     }
+
+   
 }
 

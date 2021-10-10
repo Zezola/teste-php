@@ -22,7 +22,7 @@
                 if ($planosDecoded[$aux]["registro"] == $reg) {
                     // Pegar o codigo do plano quando encontrar
                     
-                    $plano = new Plano(4, $planosDecoded[$aux]["registro"], $planosDecoded[$aux]["nome"]
+                    $plano = new Plano( $planosDecoded[$aux]["registro"], $planosDecoded[$aux]["nome"]
                     , $planosDecoded[$aux]["codigo"]);
                     
                     // Adicionar a lista os planos que batem com o meu registro
@@ -31,10 +31,12 @@
                 }           
                 
                 
-            }               
-                     
+            }                   
             
         }
+
+
+        
 
         
 

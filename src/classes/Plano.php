@@ -11,8 +11,8 @@
         private string $nome; 
         private int $codigo; 
 
-        function __construct( $quantidadeDeBeneficiarios, $registro, $nome, $codigo) {
-            $this->quantidadeDeBeneficiarios = $quantidadeDeBeneficiarios;
+        function __construct(  $registro, $nome, $codigo) {
+            
             $this->registro = $registro;
             $this->nome = $nome;
             $this->codigo = $codigo;
