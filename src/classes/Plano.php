@@ -42,7 +42,12 @@
             return $preco;
         }
 
-        
+        function printPrecoPorBeneficiario() {
+            for($aux = 0; $aux < count($this->beneficiarios); $aux++) {
+                echo $this->getPrecoPorBeneficiario($this->beneficiarios[$aux]);
+                echo "\n";
+            }
+        }
     }
 
 

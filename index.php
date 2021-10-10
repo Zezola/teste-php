@@ -80,6 +80,7 @@ Esse programa deve ler a tabela de Plano e a tabela de Preço, e retornar:
 	}
 
 	// Mostrar o preço por beneficiario
+	$plano->printPrecoPorBeneficiario();
 
 
 	
