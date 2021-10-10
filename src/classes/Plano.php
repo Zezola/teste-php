@@ -36,8 +36,7 @@
     
             // Procurando o codigo do plano
             for ($aux = 0; $aux < count($precosDecoded); $aux++) {
-                if ($this->codigo == $precosDecoded[$aux]["codigo"] && 
-                $this->vidas >= $precosDecoded[$aux]["minimo_vidas"]) {
+                if ($this->codigo == $precosDecoded[$aux]["codigo"] && $this->vidas >= $precosDecoded[$aux]["minimo_vidas"]) {
                     $preco = $precosDecoded[$aux][$beneficario->getFaixa($beneficario->getIdade())];
                 }
                 
