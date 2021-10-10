@@ -44,8 +44,10 @@
 
         function printPrecoPorBeneficiario() {
             for($aux = 0; $aux < count($this->beneficiarios); $aux++) {
-                echo $this->getPrecoPorBeneficiario($this->beneficiarios[$aux]);
-                echo "\n";
+                echo "nome: ".$this->beneficiarios[$aux]->getNome()."\n";
+                echo "idade: ".$this->beneficiarios[$aux]->getIdade()."\n";
+                echo "preco: ".$this->getPrecoPorBeneficiario($this->beneficiarios[$aux])."\n";
+                
             }
         }
     }
