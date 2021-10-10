@@ -26,7 +26,30 @@
             array_push($this->beneficiarios, $beneficario);
             
         }
+
+        function getPrecoPorBeneficiario(Beneficiario $beneficario) {
+            $precosJson = file_get_contents("precos.json");
+            $precosDecoded = json_decode($precosJson, true);
+    
+            // Procurando o codigo do plano
+            for ($aux = 0; $aux < count($precosDecoded); $aux++) {
+                if ($this->codigo == $precosDecoded[$aux]["codigo"]) {
+                    $preco = $precosDecoded[$aux][$beneficario->getFaixa($beneficario->getIdade())];
+                }
+                
+            }
+            
+            return $preco;
+        }
+
+        
     }
+
+
+
+   
+
+
 
     
 

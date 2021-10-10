@@ -75,8 +75,11 @@ Esse programa deve ler a tabela de Plano e a tabela de Preço, e retornar:
 		$idade = readline("Idade do beneficiario: ");
 		$beneficiario = new Beneficiario($nome, $idade);		
 		$plano->cadastrarBeneficiario($beneficiario);
+		
 
 	}
+
+	// Mostrar o preço por beneficiario
 
 
 	

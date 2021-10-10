@@ -22,6 +22,17 @@ class Beneficiario {
         return $this->nome;
     }
 
-   
+   function getFaixa($idade) {
+        if($idade < 17) {
+            $faixa = "faixa1";
+        } else if ($idade > 17 && $idade < 40) {
+            $faixa = "faixa2";
+        } else {
+            $faixa = "faixa3";
+        }
+
+        return $faixa;
+   }
+    
 }
 
