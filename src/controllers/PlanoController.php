@@ -28,8 +28,7 @@
                     // Adicionar a lista os planos que batem com o meu registro
                     return $plano;
                    
-                }           
-                
+                } 
                 
             }                   
             

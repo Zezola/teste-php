@@ -65,25 +65,33 @@ Esse programa deve ler a tabela de Plano e a tabela de Preço, e retornar:
 	$planoController = new PlanoController();
 	$reg = readline("Registro do plano: ");
 	$plano = $planoController->getPlanosByRegistro($reg);
-	
-	// Pegando numero de vidas do plano
-	$vidas = readline("Numero de vidas do plano: ");
 
-	// Cadastrando beneficiarios com idade e nome e pegando seu preco baseado na idade
-	for ($aux = 0; $aux < $vidas; $aux++) {
-		$nome = readline("Nome do beneficario: ");
-		$idade = readline("Idade do beneficiario: ");
-		$beneficiario = new Beneficiario($nome, $idade);		
-		$plano->cadastrarBeneficiario($beneficiario);
+	if ($plano != NULL) {
+		// Pegando numero de vidas do plano
+		$vidas = readline("Numero de vidas do plano: ");
+
+		// Cadastrando beneficiarios com idade e nome e pegando seu preco baseado na idade
 		
+		for ($aux = 0; $aux < $vidas; $aux++) {
+			$nome = readline("Nome do beneficario: ");
+			$idade = readline("Idade do beneficiario: ");
+			$beneficiario = new Beneficiario($nome, $idade);		
+			$plano->cadastrarBeneficiario($beneficiario);
+			
 
+		}
+
+		// Mostrar o preço por beneficiario
+		$plano->printPrecoPorBeneficiario();
+		
+		// Mostrar o preco total
+		echo "Preco total do plano: " .$plano->getPrecoTotal()."\n";
+
+	} else {
+		echo "Registro de plano inexistente" ."\n";
 	}
-
-	// Mostrar o preço por beneficiario
-	$plano->printPrecoPorBeneficiario();
 	
-	// Mostrar o preco total
-	echo "Preco total do plano: " .$plano->getPrecoTotal()."\n";
+	
 
 
 	
