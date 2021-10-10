@@ -50,6 +50,14 @@
                 
             }
         }
+
+        function getPrecoTotal() {
+            (double) $precoTotal = 0; 
+            for ($aux = 0; $aux < count($this->beneficiarios); $aux++) {
+                $precoTotal += $this->getPrecoPorBeneficiario($this->beneficiarios[$aux]);
+            }
+            return $precoTotal;
+        }
     }
 
 
